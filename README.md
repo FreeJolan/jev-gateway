@@ -4,6 +4,8 @@
 
 使用 Node.js 24，无运行时第三方依赖。支持本地运行和 Vercel 部署。
 
+正式地址：<https://jev-gateway-gamma.vercel.app>。GitHub 的 `main` 分支已关联 Vercel，推送后自动部署。
+
 | 接口 | 用途 |
 | --- | --- |
 | `POST /v1/systemone` | 官方 SDK 推理接口，保留 JSON 原文、上游状态码和响应 |
@@ -19,7 +21,7 @@
 `JEV_URL` 填部署的根地址，不包含 `/v1`。调用方无需持有官方 Key。
 
 ```bash
-export JEV_URL='https://your-project.vercel.app'
+export JEV_URL='https://jev-gateway-gamma.vercel.app'
 export JEV_GATEWAY_TOKEN='<你的网关 Token>'
 
 curl --fail-with-body -sS "$JEV_URL/ask" \
@@ -115,7 +117,7 @@ npx vercel link
 npx vercel pull --environment=preview
 npx vercel build
 npx vercel deploy --prebuilt
-# Preview 验证通过后发布正式环境
+# 按 CLI 返回的环境和地址运行验证，再显式发布正式环境
 npx vercel --prod
 ```
 
