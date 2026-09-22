@@ -1,0 +1,10 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "framework": null,
+  "buildCommand": "npm run build",
+  "outputDirectory": "public",
+  "env": { "NODEJS_HELPERS": "0" },
+  "regions": ["sin1"],
+  "functions": { "api/index.ts": { "maxDuration": 90 } },
+  "rewrites": [{ "source": "/:path*", "destination": "/api/index" }]
+}

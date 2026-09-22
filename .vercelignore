@@ -1,0 +1,11 @@
+.git/
+.github/
+dist/
+node_modules/
+test/
+scripts/
+.env
+.env.*
+*.log
+verification-results.json
+README.md
